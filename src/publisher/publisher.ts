@@ -70,7 +70,7 @@ const
  * Takes the name of an event and applies the scope to it when a scope
  * is provided.
  *
- * @param event The base name of the event
+ * @param event The base name of the event.
  * @param scope An optional scope to add to the base event name.
  *
  * @returns Returns the name of the event.
