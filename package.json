@@ -1,0 +1,51 @@
+{
+  "name": "@tbusser/pub-sub",
+  "version": "1.0.0-0",
+  "description": "A pub/sub system",
+  "main": "index.js",
+  "sideEffects": false,
+  "type": "module",
+  "types": "index.d.ts",
+  "scripts": {
+    "build": "./scripts/build.sh",
+    "coverage": "nyc --reporter=html --reporter=text --reporter=text-summary npm test",
+    "test": "mocha"
+  },
+  "keywords": [
+    "es6",
+    "pubsub",
+    "typescript"
+  ],
+  "nyc": {
+    "include": [
+      "src/**"
+    ],
+    "extension": [
+      ".ts"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "Thijs Busser <tbusser@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/chai": "^4.2.9",
+    "@types/mocha": "^7.0.1",
+    "@types/sinon": "^7.5.2",
+    "chai": "^4.2.0",
+    "core-js": "^3.6.4",
+    "mocha": "^7.1.0",
+    "mz": "^2.7.0",
+    "nyc": "^15.0.0",
+    "sinon": "^9.0.0",
+    "ts-mocha": "^6.0.0",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.2"
+  }
+}

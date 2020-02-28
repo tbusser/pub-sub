@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+      // Process & infer types from .js files.
+      "allowJs": true,
+      // Import non-ES modules as default imports.
+      "esModuleInterop": true,
+      // Disallow features that require cross-file information for emit.
+      "isolatedModules": true,
+      // Search under node_modules for non-relative imports.
+      "moduleResolution": "node",
+      // Don't emit; allow Babel to transform files.
+      "noEmit": true,
+      // Report errors on unused locals.
+      "noUnusedLocals": true,
+      // Enable strictest settings like strictNullChecks & noImplicitAny.
+      "strict": true,
+      // Target latest version of ECMAScript.
+      "target": "ESNext",
+      // Specify list of directories for type definition files to be included.
+      "typeRoots": ["node_modules/@types"]
+    },
+    "include": ["src/**/*"]
+  }
