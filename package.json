@@ -1,5 +1,5 @@
 {
-  "name": "@tbusser/pub-sub",
+  "name": "@ictoanen/pub-sub",
   "version": "1.0.1",
   "description": "A pub/sub system",
   "main": "index.js",
