@@ -1,6 +1,6 @@
 {
-  "name": "@tbusser/pub-sub",
-  "version": "1.0.1",
+  "name": "@ictoanen/pub-sub",
+  "version": "1.0.2",
   "description": "A pub/sub system",
   "main": "index.js",
   "sideEffects": false,
