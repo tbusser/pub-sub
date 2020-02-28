@@ -31,6 +31,8 @@ async function transform() {
 	delete json.publishConfig;
 	delete json.scripts;
 
+	json.type = 'module';
+
 	await writeFile(`${distPath}/${fileName}`, JSON.stringify(json, null, 4));
 }
 

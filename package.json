@@ -4,7 +4,6 @@
   "description": "A pub/sub system",
   "main": "index.js",
   "sideEffects": false,
-  "type": "module",
   "types": "index.d.ts",
   "scripts": {
     "build": "./scripts/build.sh",
