@@ -28,7 +28,6 @@ async function transform() {
 
 	delete json.devDependencies;
 	delete json.nyc;
-	delete json.publishConfig;
 	delete json.scripts;
 
 	json.type = 'module';
