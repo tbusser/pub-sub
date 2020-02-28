@@ -1,6 +1,6 @@
 {
   "name": "@ictoanen/pub-sub",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A pub/sub system",
   "main": "index.js",
   "sideEffects": false,
