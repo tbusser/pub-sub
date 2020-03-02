@@ -18,3 +18,7 @@ tsc -p tsconfig.emit.json
 
 echo "- Transform and copy package.json"
 ./scripts/transform.js
+
+echo "- Copy README and License"
+cp LICENSE $dir
+cp README.md $dir
