@@ -1,8 +1,9 @@
 {
   "name": "@ictoanen/pub-sub",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A pub/sub system",
   "main": "index.js",
+  "repository": "https://github.com/tbusser/pub-sub",
   "sideEffects": false,
   "types": "index.d.ts",
   "scripts": {
