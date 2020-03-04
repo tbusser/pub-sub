@@ -71,7 +71,7 @@ Calling `preventDefault` on an event which isn't cancellable will have no effect
 
 ## Strong typed events with TypeScript
 If you're using TypeScript you can use this package to create strong typed events. In order to do this you will need to create a file where the signature for the `publish` and `subscribe` methods are overloaded. In this same file you can also setup the coupling between event name and the data type of the `detail` property of the events. See the code example below for a reference implementation, assume this file is named `events.ts`:
-```js
+```typescript
 import { Action } from '@ictoanen/pub-sub';
 
 // The interface the for the detail property which will be used when the
@@ -121,7 +121,7 @@ declare module '@ictoanen/pub-sub/publisher/publisher' {
 ```
 
 With this in place it is now possible to import the `publish` and `subscribe` methods from the NPM package and have intellisense for the detail property of received events and when publishing a strong typed event.
-```js
+```typescript
 import {subscribe, publish} from '@ictoanen/pub-sub';
 import { DEMO_EVENT } from './events';
 
