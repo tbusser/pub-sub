@@ -70,8 +70,11 @@ subscribe('test-event', (event) => event.preventDefault());
 Calling `preventDefault` on an event which isn't cancellable will have no effect.
 
 ## Strong typed events with TypeScript
-If you're using TypeScript you can use this package to create strong typed events. In order to do this you will need to create a file where the signature for the `publish` and `subscribe` methods are overloaded. In this same file you can also setup the coupling between event name and the data type of the `detail` property of the events. See the code example below for a reference implementation, assume this file is named `events.ts`:
-```js
+If you're using TypeScript you can use this package to create strong typed events. In order to do this you will need to create a file where the signature for the `publish` and `subscribe` methods are overloaded. In this same file you can also setup the coupling between event name and the data type of the `detail` property of the events.
+
+### Defining the events and overloading the methods
+See the code example below for a reference implementation, assume this file is named `events.ts`:
+```typescript
 import { Action } from '@ictoanen/pub-sub';
 
 // The interface the for the detail property which will be used when the
@@ -105,7 +108,7 @@ export const DEMO_EVENT: TypedCustomEvent<typeof KEY_DEMO_EVENT> = KEY_DEMO_EVEN
  *
  * @see {@link https://github.com/microsoft/TypeScript/issues/21566}
  */
-declare module '@ictoanen/pub-sub/publisher/publisher' {
+declare module '@ictoanen/pub-sub' {
 	export function publish<K extends keyof EventDetailMapping>(
 		event: TypedCustomEvent<K>,
 		detail: EventDetailMapping[K],
@@ -120,14 +123,16 @@ declare module '@ictoanen/pub-sub/publisher/publisher' {
 }
 ```
 
+### Using the strong typed events
 With this in place it is now possible to import the `publish` and `subscribe` methods from the NPM package and have intellisense for the detail property of received events and when publishing a strong typed event.
-```js
+```typescript
 import {subscribe, publish} from '@ictoanen/pub-sub';
 import { DEMO_EVENT } from './events';
 
 subscribe(DEMO_EVENT, event => event.detail?.message);
 ```
 
+### Strong typed events in the editor
 In a code editor the strong typed event will look like this:
 ![image](https://user-images.githubusercontent.com/5519027/75864930-0b8e2800-5e03-11ea-8017-cceec58e4487.png)
 As you can see on line 4, there is intellisense for the detail property of the event. This is done solely based on the event name used to subscribe the handler.

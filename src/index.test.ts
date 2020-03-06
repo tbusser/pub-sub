@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { spy } from 'sinon';
-import { Action } from '../Action/Action';
-import { once, publish, subscribe, unsubscribe } from './publisher';
+import { Action } from './Action/Action';
+import { once, publish, subscribe, unsubscribe } from './index';
 
 /* ========================================================================== *\
 	PRIVATE VARIABLES
