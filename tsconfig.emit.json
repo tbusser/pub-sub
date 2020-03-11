@@ -13,7 +13,7 @@
       // Report errors on unused locals.
       "noUnusedLocals": true,
       // Redirect output structure to the directory
-      "outDir": "./dist/",
+      "outDir": "./dist/esm",
       // Enable strictest settings like strictNullChecks & noImplicitAny.
       "strict": true,
       // Target latest version of ECMAScript.
