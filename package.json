@@ -1,6 +1,6 @@
 {
   "name": "@ictoanen/pub-sub",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "description": "A pub/sub system",
   "jsnext:main": "esm/index.js",
   "main": "index.js",
